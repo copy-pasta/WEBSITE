@@ -1,0 +1,145 @@
+/* General styles for the body */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+/* Reset styling for the nav bar */
+.nav-bar {
+    list-style: none; /* Remove bullets */
+    padding: 0;       /* Remove padding */
+    margin: 0;        /* Remove margin */
+    position: absolute;
+    top: 100px; /* 10px from the top of the page */
+    right: 70px;  /* Aligns it to the right side */
+}
+
+/* Styling for each nav item */
+.nav-bar li {
+    margin: 1.5rem; /* Space between items */
+}
+
+/* Link styling */
+.nav-bar a {
+
+    font-family: "Cutive Mono", serif;
+    font-style: normal;
+    color: #ffffffab;
+    text-decoration: none; /* Remove underline */
+    font-size: 16px;     /* Adjust font size */
+    display: inline-block; /* Allows padding around the link */
+    padding: 0.5rem 1rem;  /* Add padding for clickable area */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect */
+.nav-bar a:hover {
+    color: #d44b64df; /* Change to your preferred hover color */
+}
+
+/* Active page styling */
+.nav-bar .active a {
+    color: #ffffffe2; /* Change to your preferred active color */
+    /* Optional: make the active link bold */
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    height: 100%;
+}
+
+
+/* Styling for the header on home page */
+#home-page header {
+    position: absolute;
+    bottom: 150px; /* 10px from the top of the page */
+    left: 150px;  /* Aligns it to the right side */
+    font-family: 'Archivo', sans-serif;
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+    text-align: right;
+}
+
+/* Styling for the header on about page */
+#about header {
+    position: absolute;
+    top: 100px; /* 10px from the top of the page */
+    left: 150px;  /* Aligns it to the right side */
+    font-family: 'Archivo', sans-serif;
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+    text-align: right;
+}
+
+.header-text p {
+    margin: 1rem 0; /* Space between items */
+}
+
+/* Styling for the main content */
+#about-text {
+ width: 100%; /* Set the block size relative to the viewport width */
+  max-width: 800px; /* Ensure the block doesn’t exceed a specific size */
+  margin: 20px auto; /* Center the block and add spacing above and below */
+  padding: 0px; /* Add some inner spacing for readability */
+  font-family: "Cutive Mono", serif;
+  font-style: normal;
+  color: #ffffffab;
+  letter-spacing: 8px;
+  bottom: 0px;
+  text-align: justify;
+font-size: 16px;     /* Adjust font size */
+ position: absolute;
+line-height: 1.6;
+left: 600px;
+}
+
+
+#home-page {
+    font-family: 'Archivo', sans-serif;
+    background-image: url('../img/FULL.jpg');
+    margin: 0; /* Remove any default margins around the body */
+    padding: 0; /* Remove padding */
+    height: 100vh; /* Make sure the body fills the entire viewport height */
+    background-size: cover;      /* Ensures the image covers the whole screen */
+    background-position: center center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling of the image */
+}
+
+
+#about {
+    font-family: 'Archivo', sans-serif;
+    background-image: url('../img/ABOUT_1.jpg');
+    margin: 0; /* Remove any default margins around the body */
+    padding: 0; /* Remove padding */
+    height: 100vh; /* Make sure the body fills the entire viewport height */
+    background-size: cover;      /* Ensures the image covers the whole screen */
+    background-position: center center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling of the image */
+}
+#cv {
+    font-family: 'Archivo', sans-serif;
+    background-image: url('../img/FULL.jpg');
+    margin: 0; /* Remove any default margins around the body */
+    padding: 0; /* Remove padding */
+    height: 100vh; /* Make sure the body fills the entire viewport height */
+    background-size: cover;      /* Ensures the image covers the whole screen */
+    background-position: center center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling of the image */
+}
+
+/* Styling for the footer */
+footer a {
+    text-decoration: none; /* Remove underline */
+    color: #ffffff;
+    font-family: 'Archivo', sans-serif;
+    font-size: 11px;
+    padding: 0;
+    margin: 0;
+   
+}
+
