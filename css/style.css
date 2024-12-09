@@ -13,7 +13,7 @@ ul {
     margin: 0;        /* Remove margin */
     position: absolute;
     top: 100px; /* 10px from the top of the page */
-    right: 70px;  /* Aligns it to the right side */
+    right:100px;  /* Aligns it to the right side */
 }
 
 /* Styling for each nav item */
@@ -36,7 +36,7 @@ ul {
 
 /* Hover effect */
 .nav-bar a:hover {
-    color: #d44b64df; /* Change to your preferred hover color */
+    color: #da506adf; /* Change to your preferred hover color */
 }
 
 /* Active page styling */
@@ -92,14 +92,14 @@ html, body {
   }
   
   #about-text {
-    max-width: 1000px; /* Limit text width */
+    max-width: 800px; /* Limit text width */
     width: 100%; /* Make it responsive */
     font-family: "Cutive Mono", serif; /* Use your chosen font */
-    color: rgba(255, 255, 255, 0.67); /* Semi-transparent white text */
+    color: rgba(255, 255, 255, 0.818); /* Semi-transparent white text */
     text-align: justify; /* Align text for clean edges */
-    font-size: 18px; /* Set font size */
+    font-size: 16px; /* Set font size */
     line-height: 1.3; /* Improve readability */
-    letter-spacing: 0px; /* Slight spacing */
+    letter-spacing: 3.8px; /* Slight spacing */
   }
 
 
