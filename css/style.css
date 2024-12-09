@@ -6,12 +6,17 @@ ul {
     padding: 0;
   }
 
+.nav-bar a:hover {
+    color: #da506adf; /* Change to your preferred hover color */
+}
+
 /* Reset styling for the nav bar */
 .nav-bar {
+    z-index: 1000; /* A higher z-index than the #about-container */
     list-style: none; /* Remove bullets */
     padding: 0;       /* Remove padding */
     margin: 0;        /* Remove margin */
-    position: absolute;
+    position: fixed;
     top: 100px; /* 10px from the top of the page */
     right:100px;  /* Aligns it to the right side */
 }
@@ -35,9 +40,6 @@ ul {
 }
 
 /* Hover effect */
-.nav-bar a:hover {
-    color: #da506adf; /* Change to your preferred hover color */
-}
 
 /* Active page styling */
 .nav-bar .active a {
@@ -67,9 +69,9 @@ html, body {
 
 /* Styling for the header on about page */
 #about header {
-    position: absolute;
-    top: 100px; /* 10px from the top of the page */
-    left: 150px;  /* Aligns it to the left side */
+    position: fixed;
+    bottom: 450px; /* 10px from the top of the page */
+    left: 150px;  /* Aligns it to the right side */
     font-family: 'Archivo', sans-serif;
     font-size: 32px;
     color: rgb(255, 255, 255);
@@ -83,6 +85,7 @@ html, body {
 /* Styling for the main content */
 
 #about-container {
+    z-index: 1; /* Lower than navbar to ensure navbar is clickable */
     display: flex; /* Enable flexbox layout */
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
