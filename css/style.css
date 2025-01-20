@@ -7,7 +7,7 @@ html {
 /* Container for two sections */
 .container {
     position: relative;
-    height: 200vh; /* Double viewport height */
+    height: 500vh; /* Double viewport height */
 }
 
 /* Image spanning two sections */
@@ -16,8 +16,8 @@ html {
   top: 0;
   left: 0;
   width: 100%; /* Stretch the image to the full width */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: contain; /* Ensures the full image is visible */
+  height: 500vh; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensures the full image is visible */
   z-index: -1; /* Push image behind content */
 }
 
@@ -129,17 +129,6 @@ html, body {
     text-align: right;
 }
 
-/* Styling for the header on about page */
-#about header {
-    position: fixed;
-    bottom: 450px; /* 10px from the top of the page */
-    left: 150px;  /* Aligns it to the right side */
-    font-family: 'Archivo', sans-serif;
-    font-size: 32px;
-    color: rgb(255, 255, 255);
-    text-align: right;
-}
-
 
 .header-text p {
     margin: 1rem 0; /* Space between items */
@@ -167,7 +156,7 @@ html, body {
     color: rgba(255, 255, 255, 0.868); /* Semi-transparent white text */
     text-align: justify; /* Align text for clean edges */
     font-size: 16px; /* Set font size */
-    line-height: 2.0; /* Improve readability */
+    line-height: 1.7; /* Improve readability */
     letter-spacing: 3px; /* Slight spacing */
   }
 
@@ -222,39 +211,27 @@ html, body {
     height: 100vh; /* Make sure the body fills the entire viewport height */
 }
 
-#cv {
-    font-family: 'Archivo', sans-serif;
-    background-image: url('../img/FULL.jpg');
-    margin: 0; /* Remove any default margins around the body */
-    padding: 0; /* Remove padding */
-    height: 100vh; /* Make sure the body fills the entire viewport height */
-    background-size: cover;      /* Ensures the image covers the whole screen */
-    background-position: center center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents tiling of the image */
+.cv-paragraph {
+  font-family: 'Cutive Mono', serif; /* Font style */
+  font-size: 18px; /* Font size */
+  line-height: 1.6; /* Line height for readability */
+  margin-bottom: 20px; /* Space below the paragraph */
+  text-align: justify; /* Justify text alignment */
+  max-width: 800px; /* Limit the width of the paragraph */
+  margin-left: auto; /* Center horizontally */
+  margin-right: auto; /* Center horizontally */
 }
 
-
-#cv-container {
-    z-index: 1; /* Lower than navbar to ensure navbar is clickable */
-    display: flex; /* Enable flexbox layout */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    height: 60vh; /* Full viewport height */
-    width: 100%; /* Full width */
-    position: relative; /* Ensure proper positioning of child elements */
-  }
-
-
-#contact {
-    max-width: 800px; /* Limit text width */
-    width: 100%; /* Make it responsive */
-    font-family: "Courier", serif; /* Use your chosen font */
-    color:#da506adf; /* Semi-transparent white text */
-    text-align: center; /* Align text for clean edges */
-    font-size: 14px; /* Set font size */
-    line-height: 2; /* Improve readability */
-    letter-spacing: 5px; /* Slight spacing */
+.contact-paragraph {
+  font-family: 'Cutive Mono', serif; /* Font style */
+  font-size: 18px; /* Font size */
+  line-height: 1.6; /* Line height for readability */
+  margin-bottom: 20px; /* Space below the paragraph */
+  text-align: justify; /* Justify text alignment */
+  max-width: 800px; /* Limit the width of the paragraph */
+  margin-left: auto; /* Center horizontally */
 }
+
 
 #projects-list {
     max-width: 800px; /* Limit text width */
