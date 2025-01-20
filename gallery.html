@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Cutive+Mono&display=swap" rel="stylesheet">
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="projects">  
+    <div class="navbar-container"> 
+        <nav>
+            <ul class="nav-bar">
+                <li><a href="index.html">home</a></li>
+                <li><a href="index.html#about">about</a></li>
+                <li class="active"><a href="gallery.html">gallery</a></li>
+                <li><a href="cv.html">cv</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+        <header>
+            <div class="header-text">
+                <p>JACQUELINE</p>
+                <p>JULIANNA</p>
+                <p>BUTZINGER</p>
+            </div>
+        </header>
+    <main>
+        <div class="navbar-container"> 
+            <nav>
+                <ul class="nav-bar">
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="index.html#about">about</a></li>
+                    <li class="active"><a href="gallery.html">gallery</a></li>
+                    <li><a href="cv.html">cv</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="gallery">
+            <!-- Photo 1 -->
+            <a href="project1.html" class="gallery-item">
+                <img src='../img/RAIN.jpg' alt="Description of Photo 1">
+                <div class="overlay">
+                    <p>A CHANCE OF RAIN</p>
+                </div>
+            </a>
+
+            <!-- Photo 2 -->
+            <a href="project2.html" class="gallery-item">
+                <img src='../img/HIKERCORE.jpg' alt="Description of Photo 2">
+                <div class="overlay">
+                    <p>HIKERCORE SPEAKER BACKPACKS</p>
+                </div>
+            </a>
+
+            <!-- Photo 3 -->
+            <a href="project3.html" class="gallery-item">
+                <img src='../img/ORGAN.jpg' alt="Description of Photo 3">
+                <div class="overlay">
+                    <p>SPECTRAL ORGAN</p>
+                </div>
+            </a>
+            
+             <!-- Photo 4 -->
+             <a href="project3.html" class="gallery-item">
+                <img src='../img/TML.jpg' alt="Description of Photo 3">
+                <div class="overlay">
+                    <p>TTHE MORNING LINE PLAYS</p>
+                </div>
+            </a>
+
+            <a href="project3.html" class="gallery-item">
+                <img src='../img/HIKERCORE2.jpg' alt="Description of Photo 3">
+                <div class="overlay">
+                    <p>HIKERCORE SPEAKER BACKPACKS</p>
+                </div>
+            </a>
+           
+        </div>
+    </main>
+
+    <footer class="footer">
+       
+    </footer>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+    <script>
+ document.addEventListener("DOMContentLoaded", () => {
+    const grid = document.querySelector('.gallery');
+    imagesLoaded(grid, function() {
+        new Masonry(grid, {
+            itemSelector: '.gallery-item',
+            columnWidth: 300, // Fixed column width (matches CSS)
+            fitWidth: true,   // Centers the grid within its container
+            gutter: 0         // No gaps between items
+        });
+        grid.classList.add('masonry-loaded'); // Show the gallery
+    });
+});
+    </script>
+</body>
+</html>

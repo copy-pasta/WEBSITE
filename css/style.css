@@ -1,5 +1,38 @@
+html {
+  scroll-behavior: smooth;
+}
+
 /* General styles for the body */
-/* Default state */
+
+/* Container for two sections */
+.container {
+    position: relative;
+    height: 200vh; /* Double viewport height */
+}
+
+/* Image spanning two sections */
+.stretched-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Stretch the image to the full width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensures the full image is visible */
+  z-index: -1; /* Push image behind content */
+}
+
+/* Section Styles */
+section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+
+
 body {
     opacity: 1;
     transition: opacity 0.5s ease, transform 0.5s ease; /* Fade and optional movement */
@@ -11,19 +44,23 @@ body.fade-out {
     transform: scale(0.95); /* Optional: Add a scale-down effect */
 }
 
+
 ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 20;
+    padding: 20;
   }
 
 .nav-bar a:hover {
     color: #da506adf; /* Change to your preferred hover color */
 }
 
-body.projects .nav-bar a:hover {
-    color: #d64f68df; /* Change to your preferred hover color */
+body.projects .navbar-container:hover a {
+    color: #d64f68; /* Change to your preferred hover color */
 }
+
+
+
 
 /* Reset styling for the nav bar */
 .nav-bar {
@@ -46,7 +83,7 @@ body.projects .nav-bar a:hover {
 
     font-family: "Cutive Mono", serif;
     font-style: normal;
-    color: #ffffffab;
+    color: #ffffff;
     text-decoration: none; /* Remove underline */
     font-size: 16px;     /* Adjust font size */
     display: inline-block; /* Allows padding around the link */
@@ -65,13 +102,12 @@ body.projects .nav-bar a:hover {
 
 /* Active styling projects page */
 body.projects .nav-bar a {
-    color:  #ffffffdf; /* Change the general text color */
+    color:  #ffffff; /* Change the general text color */
 }
 
 body.projects .nav-bar .active a {
     color: #da506adf;
 }
-
 
 
 html, body {
@@ -85,10 +121,10 @@ html, body {
 /* Styling for the header on home page */
 #home-page header {
     position: fixed;
-    bottom: 150px; /* 10px from the top of the page */
-    left: 150px;  /* Aligns it to the right side */
+    top: 120px; /* 10px from the top of the page */
+    left: 100px;  /* Aligns it to the right side */
     font-family: 'Archivo', sans-serif;
-    font-size: 32px;
+    font-size: 22px;
     color: rgb(255, 255, 255);
     text-align: right;
 }
@@ -104,6 +140,7 @@ html, body {
     text-align: right;
 }
 
+
 .header-text p {
     margin: 1rem 0; /* Space between items */
 }
@@ -111,41 +148,63 @@ html, body {
 /* Styling for the main content */
 
 #about-container {
-    z-index: 1; /* Lower than navbar to ensure navbar is clickable */
-    display: flex; /* Enable flexbox layout */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    height: 100vh; /* Full viewport height */
-    width: 100%; /* Full width */
-    position: relative; /* Ensure proper positioning of child elements */
-  }
-  
+  display: flex; /* Enables flexbox layout */
+  flex-direction: column; /* Ensures text stacks vertically */
+  justify-content: center; /* Centers content vertically */
+  align-items: center; /* Centers content horizontally */
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full width */
+  position: relative; /* Keeps normal positioning for child elements */
+  text-align: center; /* Centers the text inside the container */
+}
+
   #about-text {
-    max-width: 800px; /* Limit text width */
-    width: 100%; /* Make it responsive */
-    background: #15272f22;
-    font-family: "Courier", serif; /* Use your chosen font */
-    color: rgba(255, 255, 255, 0.704); /* Semi-transparent white text */
+    display: block; /* Enable block layout */
+    line-break: strict;
+    width: 60%; /* Make it responsive */
+    background: #222d3d09;
+    font-family: "Cutive Mono", serif; /* Use your chosen font */
+    color: rgba(255, 255, 255, 0.868); /* Semi-transparent white text */
     text-align: justify; /* Align text for clean edges */
-    font-size: 14px; /* Set font size */
-    line-height: 2; /* Improve readability */
-    letter-spacing: 5px; /* Slight spacing */
+    font-size: 16px; /* Set font size */
+    line-height: 2.0; /* Improve readability */
+    letter-spacing: 3px; /* Slight spacing */
   }
 
+  #about-text .a {
+    word-spacing: 10px;
+    font-size: 16px;
+    max-width: 100%; /* Limit text width */
+    text-align: block; /* Align text for clean edges */
+
+
+  }
+
+  #about-text .b {
+    max-width: 100%; /* Limit text width */
+    text-align: block; /* Align text for clean edges */
+
+  }
+
+  #about-text .c {
+    max-width: 100%; /* Limit text width */
+    text-align: block; /* Align text for clean edges */
+
+  }
 
 
 #home-page {
     font-family: 'Archivo', sans-serif;
-    background-image: url('../img/FULL.jpg');
+   /* background-image: url('../img/FULL.jpg');*/
     margin: 0; /* Remove any default margins around the body */
     padding: 0; /* Remove padding */
     height: 100vh; /* Make sure the body fills the entire viewport height */
-    background-size: cover;      /* Ensures the image covers the whole screen */
+    background-size: 100% 100%;      /* Ensures the image covers the whole screen */
     background-position: center center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents tiling of the image */
 }
 
-#projects {
+#gallery {
     font-family: 'Archivo', sans-serif;
     margin: 0; /* Remove any default margins around the body */
     padding: 0; /* Remove padding */
@@ -154,18 +213,15 @@ html, body {
     background-position: center center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents tiling of the image */
 }
-
 
 #about {
     font-family: 'Archivo', sans-serif;
-    background-image: url('../img/ABOUT_1.jpg');
+   /* background-image: url('../img/ABOUT_1.jpg');*/
     margin: 0; /* Remove any default margins around the body */
     padding: 0; /* Remove padding */
     height: 100vh; /* Make sure the body fills the entire viewport height */
-    background-size: cover;      /* Ensures the image covers the whole screen */
-    background-position: center center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents tiling of the image */
 }
+
 #cv {
     font-family: 'Archivo', sans-serif;
     background-image: url('../img/FULL.jpg');
@@ -183,7 +239,7 @@ html, body {
     display: flex; /* Enable flexbox layout */
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
-    height: 100vh; /* Full viewport height */
+    height: 60vh; /* Full viewport height */
     width: 100%; /* Full width */
     position: relative; /* Ensure proper positioning of child elements */
   }
@@ -193,7 +249,7 @@ html, body {
     max-width: 800px; /* Limit text width */
     width: 100%; /* Make it responsive */
     font-family: "Courier", serif; /* Use your chosen font */
-    color: rgba(255, 255, 255, 0.704); /* Semi-transparent white text */
+    color:#da506adf; /* Semi-transparent white text */
     text-align: center; /* Align text for clean edges */
     font-size: 14px; /* Set font size */
     line-height: 2; /* Improve readability */
@@ -204,7 +260,7 @@ html, body {
     max-width: 800px; /* Limit text width */
     width: 100%; /* Make it responsive */
     font-family: "Courier", serif; /* Use your chosen font */
-    color: rgba(190, 92, 92, 0.704); /* Semi-transparent white text */
+    color: #da506adf; /* Semi-transparent white text */
     text-align: center; /* Align text for clean edges */
     font-size: 14px; /* Set font size */
     line-height: 2; /* Improve readability */
@@ -215,17 +271,74 @@ html, body {
 footer a {
     text-decoration: none; /* Remove underline */
     color: #ffffff;
-    font-family: 'Archivo', sans-serif;
-    font-size: 11px;
-    padding: 0;
-    margin: 0;
-   
+    font-family: 'Arial', sans-serif;
+    font-size: 10px;
 }
 
 .footer {
     position: fixed; /* Ensures the footer stays in the same spot even when scrolling */
     bottom: 0; /* Aligns it to the bottom */
     right: 0; /* Aligns it to the right */
-    padding: 0px; /* Adds spacing */
+    padding: 0; /* Adds spacing */
+    margin: 0;
     font-size: 14px; /* Optional: Font size */
   }
+
+  .gallery {
+    width: 100%; /* Full width of the parent */
+    max-width: 100%; /* Or whatever max width you want for the grid */
+    margin: 0 auto; /* Center the gallery */
+    padding: 0 100px; /* 100px padding on left and right */
+    box-sizing: border-box;
+    visibility: hidden; /* Initially hide the gallery */
+}
+
+.gallery.masonry-loaded {
+    visibility: visible; /* Show the gallery after Masonry initializes */
+    transition: visibility 0.3s ease-in; /* Optional: smooth appearance */
+}
+
+/* Masonry Items */
+.gallery-item {
+    width: 600px; /* Fixed column width */
+    margin: 0; /* No gaps between items */
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0; /* No rounded corners */
+}
+
+@media (max-width: 768px) {
+    .gallery-item {
+        width: 100%; /* Single column on small screens */
+    }
+}
+
+
+.overlay {
+    position: absolute;
+    top: 20%; /* Vertically center the text */
+    left: 50%; /* Horizontally center the text */
+    transform: translate(-50%, -50%); /* Adjust for perfect centering */
+    color: rgba(255, 255, 255, 0); /* White text color for contrast */
+    font-size: 1.5rem; /* Adjust font size as needed */
+    font-family: 'Futura', Courier, monospace; /* Adjust font  as needed */
+    text-align: center; /* Center the text */
+    padding: 10px; /* Optional: Add padding for better visibility */
+}
+/* Hover Effect */
+.gallery-item:hover img {
+    transform: scale(1.001); /* Slight zoom effect */
+}
+
+
+.gallery-item:hover .overlay {
+    color: white; /* White text color for contrast */
+}
+
+
